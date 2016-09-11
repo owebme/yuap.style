@@ -1,0 +1,22 @@
+.tutorial {
+    @include abs(fixed);
+    z-index:101;
+
+    &__shape {
+        box-sizing:content-box;
+        position: absolute;
+        border: 10000px solid rgba(#fcfcfc,.8);
+        margin-left: -10000px;
+        margin-top: -10000px;
+        width: 300px;
+        height: 300px;
+        transition:all .6s ease .3s, border-radius .3s ease;
+        // border-radius: 10009.305481510202px;
+        // box-shadow: inset 0 0 0 3px $azureDark, inset 0 0 15px rgba(0,0,0,0.4);
+        // transform: translate3d(547.984375px, 612.3127998836815px, 0) scale(2.1492708333333335);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 5px $azureDark, inset 0 0 25px rgba(0,0,0,0.4);
+        transform: translateX(55px) translateY(50px) scale(1.0842303978193728);
+
+    }
+}

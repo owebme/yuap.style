@@ -1,0 +1,27 @@
+.content {
+    padding:102px 80px 80px 100px;
+    font-family:$helvetica;
+    color:$grayLight;
+    max-width:1000px;
+}
+
+@media screen and (min-width: $sm-width) and (max-width: $md-width) {
+    .content {
+        padding-left:80px;
+        padding-right:60px;
+    }
+}
+@media screen and (min-width: $sm-width) and (max-width: $md2-width) {
+    .content {
+        padding-left:60px;
+        padding-right:40px;
+    }
+}
+@media screen and (max-width: $md2-width) {
+    h2 {
+        text-align:center;
+    }
+    .content {
+        padding:190px 40px 60px 40px;
+    }
+}

@@ -1,0 +1,200 @@
+.tag {
+    @extend .pos-rel;
+    @extend .float-left;
+    @extend .flex-row-centered;
+    @extend .pl-xs;
+    @extend .pr-xs;
+    @extend .h35;
+    @extend .borderRadius-xxl;
+    @extend .bg-blue-transparent;
+    @extend .borderWidth-1;
+    @extend .borderStyle-solid;
+    @extend .borderColor-blue-transparent;
+    @extend .c-gray;
+    @extend .fontFamily-helvetica;
+    @extend .fontWeight-normal;
+    @extend .userSelect-none;
+    @extend .cursor-pointer;
+    font-size:13px;
+    margin-right:6px;
+    margin-bottom:5px;
+    @include accelerate(true);
+    will-change:background, border-color, color, transform;
+    @extend .transition-default;
+
+    &-count {
+        @extend .flex-row-centered;
+        @extend .pos-abs;
+        @extend .borderRadius-circle;
+        @extend .fontFamily-roboto;
+        @extend .fontWeight-bold;
+        @extend .fontSize-xs;
+        @extend .bg-white;
+        top:-7px;
+        left:-2px;
+        width:18px;
+        height:18px;
+        color:rgba($blue,.8);
+        border:1px solid rgba($blue,.8);
+    }
+    &-text {
+        @include textEllipsis(140px);
+    }
+    &-remove {
+        @extend .display-inlineBlock;
+        @include ui-icon(remove, 21px, 21px);
+        margin-left:6px;
+        margin-right:-2px;
+    }
+    &:before {
+        @extend .content-empty;
+        @extend .display-inlineBlock;
+        @include ui-icon(tag, 21px, 21px);
+        margin-right:8px;
+    }
+    &-icon {
+        @extend .p0;
+        @extend .borderRadius-circle;
+        width:35px;
+
+        &:before {
+            @extend .mr0;
+        }
+    }
+    &.new {
+        @extend .tag-icon;
+
+        &:before {
+            @include ui-icon(tagAdd);
+        }
+        &:hover:before {
+            @include ui-icon(tagAdd_white);
+        }
+    }
+    &.add {
+        @extend .tag-icon;
+
+        &:before {
+            @include ui-icon(plus);
+        }
+        &:hover:before {
+            @include ui-icon(plus_white);
+        }
+    }
+    &.edit {
+        @extend .tag-icon;
+
+        &:before {
+            @include ui-icon(edit, 16px, 16px);
+        }
+        &:hover:before {
+            @include ui-icon(edit_white);
+        }
+    }
+    &.small {
+        background:none;
+        border-color:#dadee2;
+        padding:0 9px;
+        height:30px;
+
+        &:before {
+            width:17px;
+            height:17px;
+            margin-right:6px;
+        }
+    }
+    &:hover {
+        @extend .c-white;
+        @extend .borderColor-blue;
+        @extend .bg-blue;
+
+        &:before {
+            @include ui-icon(tag_white);
+        }
+        .tag-remove {
+            @include ui-icon(remove_white);
+        }
+    }
+    &:active {
+        transform:translate3d(0, 1px, 0) scale(0.85);
+    }
+}
+.tag__list {
+    &__control {
+        width: 100%;
+        border: 1px solid darken(#e9eef2, 5%);
+        color:$blackDark;
+        padding: 8px 8px 3px;
+        border-radius:6px 6px 0 0;
+
+        &:after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .tag {
+            cursor:default;
+
+            &:hover {
+                color:$gray;
+                border-color:rgba($blue,.1);
+                background:rgba($blue,.1);
+
+                &:before {
+                    @include ui-icon(tag);
+                }
+                .tag-remove {
+                    @include ui-icon(remove);
+
+                    &:hover {
+                        @include ui-icon(remove_fill);
+                        cursor:pointer;
+                    }
+                }
+            }
+            &:active {
+                transform:translate3d(0, 0, 0) scale(1);
+            }
+        }
+        .isAvail {
+            animation:tag__isAvail 0.6s linear;
+        }
+        @keyframes tag__isAvail {
+            50% {
+                border-color:rgba($crimson,.2);
+                background:rgba($crimson,.2);
+            }
+        }
+    }
+    &__input {
+        display:block;
+        float:left;
+        border:none;
+        background:none;
+        width:200px;
+        height:40px;
+        font-family:$roboto;
+        color:$blackSoft;
+        font-size:16px;
+        line-height:35px;
+        transform:translate3d(0, -3px, 0);
+        margin-left:2px;
+
+        &.short {
+            max-width:90px;
+        }
+    }
+    &__container {
+        height:120px;
+        overflow-y:hidden;
+        border:1px solid darken(#e9eef2, 5%);
+        background:rgba(#e9eef2,.3);
+        border-top:none;
+        padding:8px 8px 3px;
+        border-radius:0 0 4px 4px;
+
+        .tag {
+            background-color:#fff;
+        }
+    }
+}

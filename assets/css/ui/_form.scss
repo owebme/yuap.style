@@ -1,0 +1,38 @@
+.form {
+    &-group {
+        padding-top:22px;
+        margin-bottom:15px;
+    }
+    fieldset {
+        padding:20px;
+        border-radius:6px;
+        border:1px solid #d9e2e9;
+
+        .form__group {
+            padding-top:10px;
+        }
+    }
+    legend {
+        padding:0 10px;
+    }
+    &__header {
+        color:$black;
+        margin:2px 0 10px;
+        font-size:20px;
+        font-weight:300;
+    }
+    p {
+        font-size:15px;
+        line-height:22px;
+    }
+    .row,
+    .row-space {
+        margin-bottom:25px;
+    }
+    .cell:first-child {
+        padding-right:25px;
+    }
+    .cell:last-child {
+        padding-left:20px;
+    }
+}

@@ -1,0 +1,61 @@
+.sidebar {
+    border-right:1px solid $smoke;
+    user-select:none;
+    overflow:auto;
+
+    &__inner {
+        @extend .pb-xl;
+    }
+    &__header {
+        @include flex("column", "center", "center");
+        @extend .p-l;
+
+        &:before {
+            display:block;
+            width:68px;
+            height:80px;
+            content:"";
+            background:url(/assets/images/logotype.svg) no-repeat 0 0 / cover;
+            @extend .mb-m;
+        }
+        &__title {
+            color:#8492a6;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            @extend .fontSize-xxs;
+        }
+        &__menu {
+            display:block;
+            @include ui-icon(menu, 28px, 28px);
+        }
+    }
+}
+
+@media screen and (max-width: $xs-width) {
+    .sidebar {
+        position:fixed;
+        top:0;
+        left:0;
+        padding:0;
+        z-index:1;
+
+        &__header {
+            @include flex("row", "center", "center");
+            @include abs(fixed);
+            padding:0 !important;
+            height:70px;
+            background-color:rgba(#fff,.97);
+            text-align:right;
+            box-shadow:0 1px 2px 0 rgba(31,45,61,.15);
+
+            &:before {
+                display:none;
+            }
+            &__title {
+                width:calc(100% - 80px);
+                font-size:12px !important;
+                text-align:left;
+            }
+        }
+    }
+}

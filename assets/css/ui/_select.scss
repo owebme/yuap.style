@@ -1,0 +1,93 @@
+.select {
+    @extend .pos-rel;
+    @extend .w100p;
+
+    select {
+        @extend .display-block;
+        @extend .fontFamily-roboto;
+        @extend .c-blackSoft;
+        @extend .fontWeight-3;
+        @extend .border-none;
+        @extend .borderRadius-m;
+        @extend .cursor-pointer;
+        @extend .bg-white;
+        @extend .outline-none;
+        @extend .w100p;
+        @extend .transition-default;
+        appearance:none;
+        box-shadow:inset 0 0 0 1px #d9e2e9;
+
+        &:hover {
+            box-shadow:inset 0 0 0 1px #c0ccda;
+        }
+    }
+    &:after {
+        content:"";
+        @extend .display-block;
+        @extend .pos-abs;
+        @extend .borderRadius-m;
+        top:50%;
+        border-style:solid;
+        border-top-color:$azureDark;
+        border-right-color:transparent;
+        border-left-color:transparent;
+        border-bottom:none;
+        pointer-events:none;
+    }
+    &-xl {
+        select {
+            font-size:18px;
+            line-height:60px;
+            padding:0 60px 0 20px;
+        }
+        &:after {
+            right:20px;
+            border-top-width:10px;
+            border-right-width:10px;
+            border-left-width:10px;
+            margin-top:-5px;
+        }
+    }
+    &-l {
+        select {
+            font-size:16px;
+            line-height:50px;
+            padding:0 50px 0 16px;
+        }
+        &:after {
+            right:18px;
+            border-top-width:8px;
+            border-right-width:8px;
+            border-left-width:8px;
+            margin-top:-4px;
+        }
+    }
+    &-m {
+        select {
+            font-size:16px;
+            line-height:40px;
+            padding:0 40px 0 12px;
+        }
+        &:after {
+            right:14px;
+            border-top-width:7px;
+            border-right-width:7px;
+            border-left-width:7px;
+            margin-top:-3.5px;
+        }
+    }
+    &-s {
+        select {
+            font-size:14px;
+            line-height:30px;
+            padding:0 30px 0 10px;
+        }
+        &:after {
+            right:10px;
+            border-top-width:6px;
+            border-right-width:6px;
+            border-left-width:6px;
+            margin-top:-3px;
+        }
+    }
+}

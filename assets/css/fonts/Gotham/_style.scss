@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/Gotham/GothaProLig.eot'); /* IE9 Compat Modes */
+  src: url('/assets/css/fonts/Gotham/GothaProLig.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/css/fonts/Gotham/GothaProLig.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProLig.woff') format('woff'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProLig.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/css/fonts/Gotham/GothaProLig.svg') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/Gotham/GothaProReg.eot'); /* IE9 Compat Modes */
+  src: url('/assets/css/fonts/Gotham/GothaProReg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/css/fonts/Gotham/GothaProReg.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProReg.woff') format('woff'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProReg.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/css/fonts/Gotham/GothaProReg.svg') format('svg'); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/Gotham/GothaProMed.eot'); /* IE9 Compat Modes */
+  src: url('/assets/css/fonts/Gotham/GothaProMed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/css/fonts/Gotham/GothaProMed.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProMed.woff') format('woff'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProMed.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/css/fonts/Gotham/GothaProMed.svg') format('svg'); /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/Gotham/GothaProBol.eot'); /* IE9 Compat Modes */
+  src: url('/assets/css/fonts/Gotham/GothaProBol.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/css/fonts/Gotham/GothaProBol.woff2') format('woff2'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProBol.woff') format('woff'), /* Modern Browsers */
+    url('/assets/css/fonts/Gotham/GothaProBol.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/css/fonts/Gotham/GothaProBol.svg') format('svg'); /* Legacy iOS */
+  font-weight: 700;
+  font-style: normal;
+}

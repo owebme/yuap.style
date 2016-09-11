@@ -1,0 +1,35 @@
+.pos-rel {
+    position:relative;
+}
+.pos-abs {
+    position:absolute;
+}
+.pos-fixed {
+    position:fixed;
+}
+.pos-abs-full {
+    @include abs();
+}
+.pos-fixed-full {
+    @include abs(fixed);
+}
+.pos-tl {
+    @extend .pos-abs;
+    top:0;
+    left:0;
+}
+.pos-tr {
+    @extend .pos-abs;
+    top:0;
+    right:0;
+}
+.pos-bl {
+    @extend .pos-abs;
+    bottom:0;
+    left:0;
+}
+.pos-br {
+    @extend .pos-abs;
+    bottom:0;
+    right:0;
+}

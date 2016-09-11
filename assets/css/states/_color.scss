@@ -1,0 +1,173 @@
+.color {
+    $i:-1;
+    @each $color in ($frozenLight, #9471DB, #4D71DB, #FFB84D, #B871B8, #71B84D, #FFDB71, #4DB8B8, #4DB8DB, #DB94DB, #FFACC5, #FF944D, #B8DB4D, #FF7194, #6AD19F){
+        $i: $i + 1;
+        &__bg#{$i} {
+            background-color:$color;
+        }
+        &__fill#{$i} {
+            fill:$color;
+        }
+        &#{$i} {
+            color:$color;
+        }
+    }
+}
+@each $title, $color in (white: $white, blue: $blue, blueLight: $blueLight, azure: $azure, azureLight: $azureLight, azureDark: $azureDark, red: $red, redLight: $redLight, crimson: $crimson, chery: $chery, orange: $orange, orangeLight: $orangeLight, yellow: $yellow, green: $green, greenLight: $greenLight, emerald: $emerald, black: $black, blackSoft: $blackSoft, blackDark: $blackDark, blackLight: $blackLight, gray: $gray, grayDark: $grayDark, grayDarken: $grayDarken, grayLight: $grayLight, grayLighten: $grayLighten, frozen: $frozen, frozenDark: $frozenDark, frozenLight: $frozenLight, frozenLighten: $frozenLighten, smoke: $smoke, smokeDark: $smokeDark, smokeDarken: $smokeDarken, snow: $snow, snowDark: $snowDark, snowDarken: $snowDarken){
+    .bg-#{$title} {
+        background-color:$color;
+    }
+    .bg-#{$title}-transparent {
+        background-color:rgba($color,.1);
+    }
+    .c-#{$title} {
+        color:$color;
+    }
+    .fill-#{$title} {
+        fill:$color;
+    }
+    .borderColor-#{$title} {
+        border-color:$color;
+    }
+    .borderColor-#{$title}-transparent {
+        border-color:rgba($color,.1);
+    }
+}
+@each $title, $color, $hover in (dark, $blackLight, $blackDark), (light, $gray, $blackLight), (white, rgba($white,.44), $white){
+    .link-#{$title} {
+        color:$color;
+
+        &:hover {
+            color:$hover;
+        }
+    }
+}
+@each $title, $color in (primary: $blue, info: $blueLight, success: $green, danger: $red, warning: $orange){
+    .btn-#{$title} {
+        opacity:0.85;
+        color:$white;
+        background-color:$color;
+
+        .btn-svg-color {
+            fill:#fff;
+        }
+        &:hover {
+            opacity:1;
+        }
+    }
+    .btn-#{$title}-hover {
+        opacity:1;
+
+        .btn-svg-color {
+            fill:$color;
+        }
+        &:hover {
+            opacity:1;
+            color:#fff;
+            box-shadow:none;
+
+            .btn-svg-color {
+                fill:#fff;
+            }
+        }
+    }
+    .btn-default-hover-#{$title} {
+        box-shadow:inset 0 0 0 1px $smoke;
+        background-color:#fff;
+
+        &:hover {
+            color:#fff;
+            box-shadow:none;
+        }
+    }
+    @if $title == "primary" {
+        .btn-#{$title}-hover {
+            opacity:0.8;
+            color:$color;
+            box-shadow:inset 0 0 0 1px $color;
+            background-color:#fff;
+
+            &:hover {
+                background-color:#2C93FF;
+            }
+        }
+        .btn-default-hover-#{$title} {
+            &:hover {
+                background-color:#2C93FF;
+            }
+        }
+    }
+    @else if $title == "danger" {
+        .btn-#{$title}-hover {
+            color:$color;
+            box-shadow:inset 0 0 0 1px $color;
+            background-color:#fff;
+
+            &:hover {
+                color:#fff;
+                background-color:$redLight;
+                box-shadow:none;
+            }
+        }
+        .btn-default-hover-#{$title} {
+            &:hover {
+                background-color:$redLight;
+            }
+        }
+    }
+    @else {
+        .btn-#{$title}-hover {
+            color:$color;
+            box-shadow:inset 0 0 0 1px $color;
+            background-color:#fff;
+
+            &:hover {
+                color:#fff;
+                background-color:$color;
+            }
+        }
+        .btn-default-hover-#{$title} {
+            &:hover {
+                background-color:$color;
+            }
+        }
+    }
+    .link-#{$title} {
+		color:$color;
+	    opacity:0.85;
+	    @extend .link;
+
+	    &:hover {
+	        opacity:1;
+            color:darken($color,3%);
+	    }
+    }
+    .link-#{$title}-hover {
+        color:$gray;
+
+        &:hover {
+            color:$color;
+        }
+    }
+}
+.btn-default {
+    box-shadow:inset 0 0 0 1px $smoke;
+    background-color:#fff;
+
+    &:hover {
+        color:#fff;
+        background-color:#2C93FF;
+        box-shadow:none;
+    }
+}
+.btn-white-hover {
+    color:$white;
+    box-shadow:inset 0 0 0 1px rgba($white,.3);
+    background-color:transparent;
+
+    &:hover {
+        color:$blackLight;
+        box-shadow:none;
+        background-color:$white;
+    }
+}

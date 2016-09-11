@@ -1,0 +1,51 @@
+@mixin abs($pos: absolute) {
+    position:$pos;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+@mixin abs_50($width, $height, $ed: px) {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:#{$width}#{$ed};
+    height:#{$height}#{$ed};
+    margin:#{-$height/2}#{$ed} 0 0 #{-$width/2}#{$ed};
+}
+@mixin flex($direction, $justify, $align) {
+    display:flex;
+    flex-direction:#{$direction};
+    justify-content:#{$justify};
+    align-items:#{$align};
+}
+@mixin accelerate($transition: false) {
+    @extend .accelerate;
+    @if $transition {
+        transform:translate3d(0, 0, 0);
+        transform:translateZ(0);
+    }
+}
+@mixin textEllipsis($width: false, $height: false, $column: false) {
+    @extend .text-ellipsis;
+    @if $width {
+        max-width:#{$width};
+    }
+    @if $height {
+        display:-webkit-box;
+        -webkit-line-clamp:#{$column};
+        -webkit-box-orient:vertical;
+        max-height:#{$height};
+    }
+    @else {
+        @extend .nowrap;
+    }
+}
+@mixin responsive($media) {
+    @if $media == max-xs-width {
+        @media screen and (max-width: $xs-width) { @content; }
+    }
+    @else if $media == max-md-width {
+        @media screen and (max-width: $md-width) { @content; }
+    }
+}

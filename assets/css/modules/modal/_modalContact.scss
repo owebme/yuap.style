@@ -1,0 +1,46 @@
+.modal__contact {
+    &__status {
+        display:block;
+        position:absolute;
+        top:-5px;
+        right:32px;
+        font-size:0;
+        cursor:pointer;
+        white-space:nowrap;
+        z-index:1;
+
+        &__icon {
+            display:inline-block;
+            vertical-align:top;
+            width:60px;
+            height:60px;
+            transform:translate3d(-5px, 0, 0);
+        }
+        &__title {
+            font-family:$roboto;
+            font-size:18px;
+            line-height:42px;
+            user-select:none;
+            @extend %caret;
+        }
+    }
+    &__tags {
+        display:block;
+        position:absolute;
+        top:0;
+        left:50%;
+        transform:translate3d(35px, 60px, 0);
+        z-index:1;
+    }
+}
+.block__contact__history {
+    height:180px;
+    padding:12px 20px;
+    border:1px solid $blue;
+    border-radius:6px;
+    opacity:0.8;
+
+    &__title {
+        color:$blue;
+    }
+}

@@ -1,0 +1,55 @@
+.auth {
+    @include abs();
+    @include flex("row", "center", "center");
+    display:none;
+    background:rgba($bg_color,.8);
+    z-index:1000;
+
+    &__wrapper {
+        @include flex("column", "center", "center");
+        width:528px;
+        color:#f0f0f0;
+        font-family:$graphik;
+        text-align:center;
+    }
+    &__title {
+        color:#f0f0f0;
+    }
+    &__subtitle {
+        color:rgba(#f0f0f0,.7);
+        font-size:20px;
+    }
+    &__input {
+        width:75%;
+        border:none;
+        background:none;
+        border-bottom:2px solid rgba(#f0f0f0,.7);
+        margin:0 0 15px 0;
+        height:60px;
+        font-size:30px;
+        line-height:60px;
+        color:$blueLight;
+        text-align:center;
+    }
+    &__button {
+        color:$blueLight;
+        margin-top:32px;
+        width:172px;
+        height:54px;
+        font-size:22px;
+        line-height:54px;
+        border:1px solid $blueLight;
+        border-radius:6px;
+        cursor:pointer;
+        user-select:none;
+        transition:all 0.12s $cubic215;
+
+        &:hover {
+            color:#f0f0f0;
+            background-color:$blueLight;
+        }
+        &:active {
+            transform:translate3d(0, 1px, 0) scale(0.8);
+        }
+    }
+}

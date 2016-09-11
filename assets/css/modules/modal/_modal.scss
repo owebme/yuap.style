@@ -1,0 +1,219 @@
+.modal {
+    opacity:0.001;
+    @include abs();
+    @include flex("row", "center", "flex-start");
+    @include accelerate();
+    background:#fcfcfc;
+    visibility:hidden;
+    will-change:opacity;
+    transition:opacity 0.25s $cubic57, visibility 0s 0.25s;
+    padding-top:30px;
+    overflow-y:scroll;
+    z-index:100;
+
+    &__wrapper {
+        @include accelerate();
+        position:relative;
+        min-height:480px;
+        will-change:transform;
+        transform:translate3d(0, 0, 0) scale3d(0.77, 0.77, 1);
+        transition:transform 0.2s $cubic57;
+    }
+    &__container {
+        position:relative;
+        font-family:$roboto;
+        font-weight:300;
+        padding:32px 25px 110px 25px;
+    }
+    &__panel__right {
+        @include accelerate();
+        position:fixed;
+        top:32px;
+        left:50%;
+        margin-left:453px;
+        z-index:2;
+    }
+    &__panel__item {
+        position:relative;
+        @include flex("row", "center", "center");
+        width:54px;
+        margin-bottom:32px;
+        cursor:default;
+
+        &__count {
+            font-size:22px;
+        }
+    }
+    &__button {
+        display:block;
+        cursor:pointer;
+        opacity:0.7;
+        transition:opacity 0.2s $cubic215, transform 0.2s $cubic215;
+
+        &:active {
+            transform:translate3d(0, 1px, 0) scale(0.8);
+        }
+        &:hover {
+            opacity:1;
+        }
+        &__close {
+            opacity:0.6;
+            @include ui-icon(close, 29px, 29px);
+            @extend .modal__button;
+            margin-bottom:5px;
+
+            &:hover {
+                opacity:1;
+            }
+        }
+        &__user {
+            @include ui-icon(userAdd, 27px, 27px);
+            @extend .modal__button;
+        }
+        &__alarm {
+            @include ui-icon(events, 30px, 30px);
+            @extend .modal__button;
+        }
+        &__print {
+            @include ui-icon(print, 28px, 28px);
+            @extend .modal__button;
+        }
+        &__sendEmail {
+            @include ui-icon(sendEmail, 40px, 40px);
+            @extend .modal__button;
+            margin-bottom:-10px;
+            transform:translate3d(-4px, -8px, 0) scale3d(1, 1.2, 1);
+
+            &:active {
+                transform:translate3d(-4px, -7px, 0) scale3d(0.8, 1, 1);
+            }
+        }
+        &__remove {
+            @include ui-icon(remove, 31px, 31px);
+            @extend .modal__button;
+            margin:-8px 0;
+        }
+    }
+    &__title {
+        font-family:$roboto;
+        font-weight:300;
+        margin-bottom:35px;
+        color:lighten($blackLight, 50%);
+
+        &__inner {
+            position:relative;
+            display:inline-block;
+            vertical-align:top;
+        }
+    }
+    &__cover {
+        @include flex("row", "center", "center");
+        position:absolute;
+        top:0;
+        left:100%;
+        width:84px;
+        height:84px;
+        border-radius:50%;
+        font-size:40px;
+        color:#fff;
+        transform:translate3d(30px, -25px, 0);
+
+        &--profile {
+            background-position:top center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            font-weight:400;
+
+            &:before {
+                content:"";
+                @include abs();
+                @include flex("row", "center", "center");
+                border-radius:50%;
+                background:linear-gradient(to bottom,rgba(51,57,71,.55),rgba(77,148,219,.6));
+                z-index:-1;
+            }
+        }
+    }
+    &__footer {
+        @include accelerate(true);
+        position:fixed;
+        bottom:0;
+        left:50%;
+        margin-left:-433px;
+        width:866px;
+        height:88px;
+        background-color:#fcfcfc;
+        font-weight:400;
+        z-index:2;
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:1px;
+            background:linear-gradient(to right, rgba(#e9eef2,0) 0%, #e9eef2 25%, #e9eef2 75%, rgba(#e9eef2,0) 100%);
+        }
+        &__wrapper {
+            text-align:center;
+            padding-top:30px;
+
+            .btn {
+                margin:0 13px;
+            }
+        }
+    }
+    &__panel__right,
+    &__footer {
+        transform:translate3d(101vw, 0, 0);
+        transition:transform 0s 0.25s;
+
+        .m-touch & {
+            left:101vw;
+            transition:left 0s 0.25s;
+        }
+    }
+    &__text__close {
+        position:fixed;
+        top:10px;
+        left:30px;
+        color:$grayLighten;
+        font-family:$roboto;
+        font-size:13.5px;
+
+        &__strong {
+            color:$blueLight;
+            text-transform:uppercase;
+        }
+        .d-touch & {
+            display:none;
+        }
+    }
+    &[data-open="true"]{
+        opacity:1;
+        visibility:visible;
+        transition:opacity 0.25s $cubic2501, visibility 0s;
+
+        .modal__wrapper {
+            transform:translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transition:transform 0.28s $cubic215;
+        }
+        .modal__panel__right,
+        .modal__footer {
+            transform:translate3d(0, 0, 0);
+            transition:transform 0s;
+
+            .m-touch & {
+                left:50%;
+                transition:left 0s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$md-width){
+    .modal__panel__right {
+        margin-left:433px;
+    }
+}

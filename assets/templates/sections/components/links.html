@@ -1,0 +1,145 @@
+<components-links>
+
+    <h2 class="mb-xl">Links</h2>
+
+    <h4 class="mb-xxs">Blue link</h4>
+    <p class="fontSize-l mb-l">This is the default, most common link style.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-m">
+            <a class="link link-primary">Default blue link</a>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ blueLinks() }</code></pre>
+        <script>
+            this.blueLinks = function(){
+                return '<a class="link link-primary" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+    <h4 class="mb-xxs">Dark link</h4>
+    <p class="fontSize-l mb-l">For links that have to match the main body text. To be used on light backgrounds.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-m">
+            <a class="link link-dark">Dark link</a>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ darkLinks() }</code></pre>
+        <script>
+            this.darkLinks = function(){
+                return '<a class="link link-dark" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+    <h4 class="mb-xxs">Light link</h4>
+    <p class="fontSize-l mb-l">For links that have to match the main body text. To be used on light backgrounds.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-m">
+            <a class="link link-light">Light link</a>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ lightLinks() }</code></pre>
+        <script>
+            this.lightLinks = function(){
+                return '<a class="link link-light" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+    <h4 class="mb-xxs">Light link (Reversed)</h4>
+    <p class="fontSize-l mb-l">For subtle or infrequently used links. To be used on dark backgrounds.</p>
+
+    <div class="bg-blackLight borderRadiusTop-m">
+        <div class="p-m">
+            <a class="link link-white">Light link reversed</a>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ linksReversed() }</code></pre>
+        <script>
+            this.linksReversed = function(){
+                return '<a class="link link-white" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+    <h4 class="mb-xxs">Light links hover</h4>
+    <p class="fontSize-l mb-l">Some links need a visual warning to prevent harmful, unintentional actions.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-m">
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-primary-hover">Link primary</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-success-hover">Link success</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-danger-hover">Link danger</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-warning-hover">Link warning</a>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ linksHover() }</code></pre>
+        <script>
+            this.linksHover = function(){
+                return '<a class="link link-primary-hover" href="#">...</a>\n'+
+                        '<a class="link link-success-hover" href="#">...</a>\n'+
+                        '<a class="link link-danger-hover" href="#">...</a>\n'+
+                        '<a class="link link-warning-hover" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+    <h4 class="mb-xxs">Colourful links</h4>
+    <p class="fontSize-l mb-l">Colourful and friendly links used on the blog to differenciate categories.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-m">
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-primary">Link primary</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-success">Link success</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-danger">Link danger</a>
+            </div>
+            <div class="display-inlineBlock mr-m">
+                <a class="link link-warning">Link warning</a>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">{ colourfulLinks() }</code></pre>
+        <script>
+            this.colourfulLinks = function(){
+                return '<a class="link link-primary" href="#">...</a>\n'+
+                        '<a class="link link-success" href="#">...</a>\n'+
+                        '<a class="link link-danger" href="#">...</a>\n'+
+                        '<a class="link link-warning" href="#">...</a>';
+            };
+        </script>
+    </div>
+
+<script>
+
+    this.on("mount", function(){
+        $$('pre > code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+
+</script>
+
+</components-links>

@@ -1,0 +1,31 @@
+.text-center {
+    text-align:center;
+}
+.text-left {
+    text-align:left;
+}
+.text-right {
+    text-align:right;
+}
+.text-lowercase {
+    text-transform:lowercase;
+}
+.text-uppercase {
+    text-transform:uppercase;
+}
+.text-capitalize {
+    text-transform:capitalize;
+}
+.text-ellipsis {
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.nowrap {
+    white-space:nowrap;
+}
+.textAnliased-auto {
+    -webkit-font-smoothing:auto;
+}
+.inline {
+    font-size:0;
+}

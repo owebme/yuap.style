@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=cyrillic-ext,latin');
+@import 'fonts/Nimbus/style';
+@import 'fonts/Gotham/style';
+@import 'fonts/HelveticaNeue/style';
+
+.fontFamily-roboto {
+    font-family:$roboto;
+}
+.fontFamily-gotham {
+    font-family:$gotham;
+}
+.fontFamily-nimbus {
+    font-family:$nimbus;
+}
+.fontFamily-helvetica {
+    font-family:$helvetica;
+}

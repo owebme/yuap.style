@@ -1,0 +1,35 @@
+@each $title, $size, $height in (xxs, 10px, 14px), (xs, 12px, 16px), (s, 14px, 18px), (m, 16px, 22px), (l, 18px, 24px), (xl, 20px, 28px), (xxl, 28px, 34px), (xxxl, 38px, 40px), (xxxxl, 46px, 46px), (xxxxxl, 64px, 64px){
+    .fontSize-#{$title} {
+        font-size:$size;
+        line-height:$height;
+
+        @if $title == "xxxxxl" or $title == "xxxxl" {
+            margin-left:-3px;
+            letter-spacing:-1.4px;
+        }
+        @if $title == "xxxl" {
+            margin-left:-3px;
+            letter-spacing:-1px;
+        }
+        @if $title == "xxl" {
+            margin-left:-2px;
+            letter-spacing:-.4px;
+        }
+        @if $title == "xl" {
+            margin-left:-0.5px;
+        }
+    }
+    .fontFamily-nimbus .fontSize-#{$title} {
+        @if $title == "xxxxxl" or $title == "xxxxl" {
+            margin-left:-2px;
+            letter-spacing:-.5px;
+        }
+        @if $title == "xxxl" {
+            margin-left:-1px;
+            letter-spacing:-.2px;
+        }
+        @if $title == "xxl" {
+            margin-left:-1px;
+        }
+    }
+}

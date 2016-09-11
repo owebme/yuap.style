@@ -1,0 +1,273 @@
+<design-typography>
+
+    <h2 class="mb-xl">Typography</h2>
+
+    <h4 class="mb-xxs">Typefaces</h4>
+    <p class="fontSize-l mb-l">Marvel's primary typeface is Fakt Soft Pro — a robust typeface with legible numbers that renders well at all sizes. It is soft and friendly, yet plain enough to get out of the way and let the user's designs shine.</p>
+
+    <h3 class="fontFamily-nimbus letterSpacing-0 mb-m">Nimbus font-family</h3>
+    <div class="inline borderWidth-1 p-m borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="fontFamily-nimbus fontSize-xl lineHeight-xl c-blackLight pl-xxs">
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha }
+                </div>
+            </div>
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha.toLowerCase() }
+                </div>
+            </div>
+            <div class="mb-xxs fontWeight-7">
+                <div each={ num in number } no-reorder class="display-inlineBlock mr-xs">
+                    { num }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-l">
+        <pre><code class="hljs">&lt;p class="fontFamily-nimbus"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h3 class="fontFamily-gotham mb-m">Gotham font-family</h3>
+    <div class="inline borderWidth-1 p-m borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="fontFamily-gotham fontSize-xl lineHeight-xl c-blackLight pl-xxs">
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha }
+                </div>
+            </div>
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha.toLowerCase() }
+                </div>
+            </div>
+            <div class="mb-xxs fontWeight-7">
+                <div each={ num in number } no-reorder class="display-inlineBlock mr-xs">
+                    { num }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-l">
+        <pre><code class="hljs">&lt;p class="fontFamily-gotham"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h3 class="fontFamily-helvetica letterSpacing-0 mb-m">Helvetica Neue font-family</h3>
+    <div class="inline borderWidth-1 p-m borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="fontFamily-helvetica fontSize-xl lineHeight-xl c-blackLight pl-xxs">
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha }
+                </div>
+            </div>
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha.toLowerCase() }
+                </div>
+            </div>
+            <div class="mb-xxs fontWeight-5">
+                <div each={ num in number } no-reorder class="display-inlineBlock mr-xs">
+                    { num }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-l">
+        <pre><code class="hljs">&lt;p class="fontFamily-helvetica"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h3 class="fontFamily-roboto letterSpacing-0 mb-m">Roboto font-family</h3>
+    <div class="inline borderWidth-1 p-m borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="fontFamily-roboto fontSize-xl lineHeight-xl c-blackLight pl-xxs">
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha }
+                </div>
+            </div>
+            <div class="mb-xs">
+                <div each={ alpha in alphabet } no-reorder class="display-inlineBlock mr-xs">
+                    { alpha.toLowerCase() }
+                </div>
+            </div>
+            <div class="mb-xxs fontWeight-5">
+                <div each={ num in number } no-reorder class="display-inlineBlock mr-xs">
+                    { num }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">&lt;p class="fontFamily-roboto"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h4 class="mb-xxs">Font sizes</h4>
+    <p class="fontSize-l mb-l">The font scale consists of 9 different font sizes. The default size applied to the <strong class="fontWeight-5 c-blue">body</strong> is Medium.</p>
+
+    <div each={ item, i in sizes } no-reorder class="fontFamily-nimbus overflow-hidden borderWidth-1 borderStyle-solid borderColor-smoke { i == 0 ? 'borderRadiusTop-m' : 'mt-1' }">
+        <div class="c-blackLight nowrap p-m">
+            <div class="p-xxs">
+                <div class="mb-s">
+                    <p class="fontSize-{ item.size }">The quick brown fox jumps over the lazy dog</p>
+                </div>
+                <p class="fontSize-s fontWeight-3 c-grayLight">{ item.title }</p>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">&lt;p class="fontSize-xxl"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontSize-xl"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontSize-m"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontSize-s"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontSize-xs"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h4 class="mb-xxs">Font weight</h4>
+    <p class="fontSize-l mb-l">There are three font weights available to use — Blond, Regular and Medium. These can be applied with <strong class="fontWeight-5 c-blue">.fontWeight-3</strong>, <strong class="fontWeight-5 c-blue">.fontWeight-4</strong> and <strong class="fontWeight-5 c-blue">.fontWeight-5</strong> respectively.</p>
+
+    <div class="borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="row flex">
+            <div class="col-md-8 borderStyle-solid borderRightWidth-1 borderColor-smoke text-center p-m">
+                <div class="p-xs">
+                    <div class="fontSize-xxxxxl fontWeight-3 c-blackLight mb-xxs">Aa</div>
+                    <p class="fontSize-s lineHeight-s fontWeight-3 c-grayLight">Helvetica Neue Light</p>
+                </div>
+            </div>
+            <div class="col-md-8 borderStyle-solid borderRightWidth-1 borderColor-smoke text-center p-m">
+                <div class="p-xs">
+                    <div class="fontSize-xxxxxl fontWeight-4 c-blackLight mb-xxs">Aa</div>
+                    <p class="fontSize-s fontWeight-3 c-grayLight">Helvetica Neue Regular</p>
+                </div>
+            </div>
+            <div class="col-md-8 text-center p-m">
+                <div class="p-xs">
+                    <div class="fontSize-xxxxxl fontWeight-5 c-blackLight mb-xxs">Aa</div>
+                    <p class="fontSize-s fontWeight-3 c-grayLight">Helvetica Neue Medium</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs">&lt;p class="fontFamily-nimbus"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontFamily-helvetica"&gt;...&lt;&frasl;p&gt;
+&lt;p class="fontFamily-roboto"&gt;...&lt;&frasl;p&gt;</code></pre>
+    </div>
+
+    <h4 class="mb-xxs">Type tags</h4>
+    <p class="fontSize-l mb-l">Text can be set in a number of different html tags — <strong class="fontWeight-5 c-blue">&lt;p&gt;</strong>, <strong class="fontWeight-5 c-blue">&lt;small&gt;</strong>, <strong class="fontWeight-5 c-blue">&lt;strong&gt;</strong>, <strong class="fontWeight-5 c-blue">&lt;time&gt;</strong>, etc. Each tag communicates a different semantic meaning but tags don't carry any aesthetic value. To order the appearance of a string of text, add additional classes for font size or font weight.</p>
+
+    <div class="p-m c-blackLight borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-xxs">
+            <div class="mb-m">
+                <strong class="fontSize-l lineHeight-l fontWeight-5">This is semantically emphasized text which is also bold.</strong>
+            </div>
+            <small class="fontFamily-nimbus fontSize-s lineHeight-s fontWeight-3">This is semantically de-emphasized text which is also small.</small>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs"><strong class="fontWeight-5">...</strong>
+<small class="fontSize-s fontWeight-3">...</small></code></pre>
+    </div>
+
+    <h4 class="mb-xxs">Alignment classes</h4>
+    <p class="fontSize-l mb-l">Left, right or center align text with text alignment classes.</p>
+
+    <div class="p-m c-blackLight borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-xxs">
+            <div class="row c-blackLight">
+                <div class="col-md-8 text-left">
+                    Left aligned text
+                </div>
+                <div class="col-md-8 text-center">
+                    Center aligned text
+                </div>
+                <div class="col-md-8 text-right">
+                    Right aligned text
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-xl">
+        <pre><code class="hljs"><p class="textAlign-left">...</p>
+<p class="textAlign-center">...</p>
+<p class="textAlign-right">...</p></code></pre>
+    </div>
+
+    <h4 class="mb-xxs">Transformation classes</h4>
+    <p class="fontSize-l mb-l">Transform text with text transformation classes.</p>
+
+    <div class="p-m c-blackLight borderWidth-1 borderStyle-solid borderColor-smoke borderRadiusTop-m">
+        <div class="p-xxs">
+            <div class="row c-blackLight">
+                <div class="col-md-8 text-left text-lowercase">
+                    Lowercased text
+                </div>
+                <div class="col-md-8 text-center text-uppercase">
+                    Uppercased text
+                </div>
+                <div class="col-md-8 text-right text-capitalize">
+                    Capitalized text
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code-preview borderRadiusTop-none mt-1 mb-m">
+        <pre><code class="hljs"><p class="textAlign-left">...</p>
+<p class="textAlign-center">...</p>
+<p class="textAlign-right">...</p></code></pre>
+    </div>
+
+<script>
+
+    this.alphabet = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('');
+
+    this.number = ('0123456789').split('');
+
+    this.sizes = [
+        {
+            size: 'xxxxl',
+            title: '46px — Extra extra extra extra large'
+        },
+        {
+            size: 'xxxl',
+            title: '38px — Extra extra extra large'
+        },
+        {
+            size: 'xxl',
+            title: '28px — Extra extra large'
+        },
+        {
+            size: 'xl',
+            title: '20px — Extra large'
+        },
+        {
+            size: 'l',
+            title: '18px — Large'
+        },
+        {
+            size: 'm',
+            title: '16px — Medium'
+        },
+        {
+            size: 's',
+            title: '14px — Small'
+        },
+        {
+            size: 'xs',
+            title: '12px — Extra small'
+        },
+        {
+            size: 'xxs',
+            title: '10px — Extra extra small'
+        }
+    ];
+
+    this.on("mount", function(){
+        $$('pre > code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+
+</script>
+
+</design-typography>

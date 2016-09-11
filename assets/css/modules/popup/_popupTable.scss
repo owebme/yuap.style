@@ -1,0 +1,188 @@
+.popup__table {
+    width:100%;
+    text-align:left;
+    border-collapse:collapse;
+
+    &__wrapper {
+        width:542px;
+        margin:-10px 0;
+        overflow:hidden;
+    }
+    &__container {
+        width:calc(100% + 20px);
+        max-height:60.2vh;
+        padding-right:21px;
+        padding-left:1px;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    th {
+        font-size:12px;
+        padding:9px 15px;
+        text-transform:uppercase;
+        color:$blue_gray;
+        font-weight:bold;
+    }
+    tr:hover {
+        td {
+            background-color:rgba(#e9eef2,.3);
+        }
+    }
+    td {
+        vertical-align:middle;
+        padding:11px 12px;
+        border:1px solid #e9eef2;
+        text-align:center;
+    }
+    p {
+        display:inline-block;
+        color:rgba($grayLighten,.8);
+        font-size:14px;
+        width:86%;
+        margin-right:15px;
+        user-select:none;
+        @include textEllipsis();
+        text-decoration:line-through;
+        transform:translate3d(0, 2px, 0);
+    }
+    tr.visible {
+        p {
+            color:$grayDark;
+            text-decoration:none;
+        }
+        .button__edit {
+            display:inline-block;
+        }
+    }
+    input {
+        display:inline-block;
+        width:86%;
+        margin:-4px 15px -4px 0;
+        transform:translate3d(0, -2px, 0);
+    }
+    .cell__text {
+        text-align:left;
+    }
+    .button {
+        position:relative;
+        cursor:pointer;
+        display:inline-block;
+        transition:transform 0.2s $cubic645;
+
+        &__add {
+            @include ui-icon("plus", 24px, 24px);
+            margin:0 -1px -5px;
+
+            &:after {
+                top:-3px;
+                left:-3px;
+            }
+        }
+        &__edit {
+            display:none;
+            @include ui-icon("edit", 19px, 19px);
+            margin:-3px 0;
+
+            &:after {
+                top:-5px;
+                left:-5px;
+            }
+        }
+        &__apply {
+            @include ui-icon("check", 22px, 22px);
+            margin:-4px 0;
+
+            &:after {
+                top:-4px;
+                left:-5px;
+            }
+        }
+        &__visible {
+            @include ui-icon("visible", 22px, 22px);
+            margin:-5px 0;
+
+            &:after {
+                top:-4px;
+                left:-4px;
+            }
+        }
+        &__unvisible {
+            @include ui-icon("unvisible", 22px, 22px);
+            margin:-5px 0;
+
+            &:after {
+                top:-4px;
+                left:-4px;
+            }
+        }
+        &__color {
+            width:16px;
+            height:16px;
+            border-radius:50%;
+
+            &:after {
+                top:-5px;
+                left:-5px;
+            }
+        }
+        &__remove {
+            @include ui-icon("remove", 20px, 20px);
+            margin:-4px 0;
+
+            &:after {
+                top:-5px;
+                left:-5px;
+            }
+            &:hover {
+                @include ui-icon("remove_fill");
+            }
+        }
+        &:after {
+            opacity:0;
+            content:"";
+            position:absolute;
+            width:30px;
+            height:30px;
+            border:1px solid rgba($blue_gray,.4);
+            border-radius:4px;
+        }
+        &:hover {
+            &:after {
+                opacity:1;
+            }
+        }
+        &:active {
+            transform:translate3d(0, 1px, 0) scale(0.8);
+        }
+    }
+    &--middle {
+        input {
+            width:88%;
+            padding-left:12px;
+            transform:translate3d(0, 0, 0);
+        }
+        p {
+            width:88%;
+            font-size:16px;
+            margin-top:2px;
+            margin-bottom:2px;
+            padding-left:5px;
+        }
+        .button {
+            &__color {
+                width:20px;
+                height:20px;
+                margin:0 0 -3px 0;
+            }
+            &__add {
+                margin:0 -1px -7px;
+            }
+            &__edit {
+                margin:0 0;
+            }
+            &__apply {
+                margin:-5px 0;
+            }
+        }
+    }
+}

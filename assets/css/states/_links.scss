@@ -1,0 +1,14 @@
+a, a:hover, input, textarea, button {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	appearance:none;
+    outline:none;
+}
+a {
+	text-decoration:none;
+}
+.link {
+	@extend .transition-default;
+    @extend .cursor-pointer;
+}

@@ -1,0 +1,69 @@
+.textarea {
+    @extend .fontFamily-roboto;
+    @extend .outline-none;
+    @extend .border-none;
+    @extend .c-blackDark;
+    @extend .fontWeight-3;
+    @extend .borderRadius-m;
+    @extend .w100p;
+    @extend .transition-default;
+    box-shadow:inset 0 0 0 1px #d9e2e9;
+
+    &:hover {
+        box-shadow:inset 0 0 0 1px #c0ccda;
+    }
+    &:focus {
+        box-shadow:inset 0 0 0 1px $azureLight;
+
+        + .input-icon .input-svg-color {
+            @extend .fill-blueLight;
+        }
+    }
+    &::-webkit-input-placeholder {
+        line-height:normal;
+        color:$grayLight;
+        padding-top:2px;
+    }
+    &::-moz-input-placeholder {
+        line-height:normal;
+        color:$grayLight;
+        padding-top:2px;
+    }
+    &-disabled,
+    &-disabled:hover {
+        @extend .bg-snow;
+        box-shadow:inset 0 0 0 1px $smoke;
+        @extend .cursor-default;
+    }
+    &-xl {
+        min-height:180px;
+        padding:16px 20px;
+        @extend .lineHeight-l;
+        @extend .fontSize-l;
+    }
+    &-l {
+        min-height:150px;
+        padding:14px 16px;
+        @extend .lineHeight-m;
+        @extend .fontSize-m;
+    }
+    &-m {
+        min-height:120px;
+        padding:8px 12px;
+        @extend .lineHeight-m;
+        @extend .fontSize-m;
+    }
+    &-s {
+        min-height:100px;
+        padding:6px 8px;
+        @extend .lineHeight-s;
+        @extend .fontSize-s;
+    }
+    &-xs {
+        min-height:80px;
+        padding:6px 8px;
+        @extend .lineHeight-xs;
+        @extend .fontSize-xs;
+        @extend .borderRadius-xs;
+    }
+}

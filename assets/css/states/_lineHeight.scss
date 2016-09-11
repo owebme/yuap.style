@@ -1,0 +1,8 @@
+@each $title, $size in (xxs: 16px, xs: 18px, s: 22px, m: 24px, l: 28px, xl: 34px, xxl: 40px, xxxl: 46px, xxxxl: 58px){
+    .lineHeight-#{$title} {
+        line-height:$size;
+    }
+}
+.lineHeight-1 {
+    line-height:1;
+}

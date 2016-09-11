@@ -1,0 +1,57 @@
+h1, h2, h3, h4, h5, h6 {
+	color:$blue;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	// font-family:$nimbus;
+    // font-weight:400;
+	@extend .fontFamily-gotham;
+	@extend .fontWeight-5;
+}
+h1, .h1 {
+	@extend .fontSize-xxxxl;
+}
+h2, .h2 {
+	@extend .fontSize-xxxl;
+}
+h3, .h3 {
+	@extend .fontSize-xxl;
+}
+h4, .h4 {
+	@extend .fontSize-xl;
+}
+p {
+    font-size:16px;
+}
+div, a, p, span, strong, th, td {
+	color:inherit;
+	font-size:inherit;
+	line-height:inherit;
+	font-family:inherit;
+}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eeeeee;
+}
+blockquote small {
+    display: block;
+    line-height: 1.428571429;
+    color: $gray;
+}
+small, .small {
+    font-size: 85%;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    color: $gray;
+    font-weight: 300;
+    line-height: 1;
+}
+h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
+    font-size: 60%;
+}
+h1 .subtitle,
+h2 .subtitle,
+h3 .subtitle {
+    display: block;
+    margin: 12px 0 35px;
+}

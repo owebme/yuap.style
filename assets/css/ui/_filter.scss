@@ -1,0 +1,21 @@
+.filter__label {
+    @include flex("row", "flex-start", "center");
+    font-size:13.5px;
+    text-transform:uppercase;
+    white-space:nowrap;
+    height:44px;
+
+    &__number {
+        display:block;
+        color:$blue_gray;
+        font-size:14.5px;
+        font-weight:bold;
+        width:54px;
+        text-align:center;
+        transition:color .2s $cubic215;
+
+        &.next {
+            text-align:left;
+        }
+    }
+}

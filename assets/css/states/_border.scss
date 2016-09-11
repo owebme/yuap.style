@@ -1,0 +1,72 @@
+@each $title, $size in (xs: 2px, s: 3px, m: 4px, l: 6px, xl: 10px, xxl: 20px, xxxl: 25px){
+    .borderRadius-#{$title} {
+        border-radius:$size;
+    }
+    .borderRadiusTop-#{$title} {
+        border-radius:$size $size 0 0;
+    }
+    .borderRadiusBottom-#{$title} {
+        border-radius:0 0 $size $size;
+    }
+    .borderRadiusTopLeft-#{$title} {
+        border-top-left-radius:$size;
+    }
+    .borderRadiusTopRight-#{$title} {
+        border-top-right-radius:$size;
+    }
+    .borderRadiusBottomLeft-#{$title} {
+        border-bottom-left-radius:$size;
+    }
+    .borderRadiusBottomRight-#{$title} {
+        border-bottom-right-radius:$size;
+    }
+}
+.borderRadius-circle {
+    border-radius:50%;
+}
+.borderRadiusTop-none {
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+}
+.borderRadiusBottom-none {
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+.borderRadiusLeft-none {
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
+.borderRadiusRight-none {
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+}
+.borderRadius-none {
+    border-radius:0;
+}
+.borderWidth-1 {
+    border-width:1px;
+}
+.borderLeftWidth-1 {
+    border-left-width:1px;
+}
+.borderRightWidth-1 {
+    border-right-width:1px;
+}
+.borderTopWidth-1 {
+    border-top-width:1px;
+}
+.borderBottomWidth-1 {
+    border-bottom-width:1px;
+}
+.borderStyle-solid {
+    border-style:solid;
+}
+.borderStyle-dotted {
+    border-style:dotted;
+}
+.borderStyle-dashed {
+    border-style:dashed;
+}
+.border-none {
+    border:none;
+}

@@ -1,0 +1,126 @@
+$roboto: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+$nimbus: "Nimbus", sans-serif;
+$gotham: "Gotham", sans-serif;
+$default: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$arial: "Arial", sans-serif;
+$helvetica: "HelveticaNeue", sans-serif;
+
+$md-width: 1024px;
+$md2-width: 991px;
+$sm-width: 768px;
+$xs-width: 767px;
+$xxs-width: 480px;
+
+$black: #28282A;
+$blackSoft: #292f33;
+$blackLight: #37474f;
+$blackDark: #070e19;
+$white: #ffffff;
+$gray: #6e8593;
+$grayDark: #52646f;
+$grayDarken: #48555e;
+$grayLight: #8b9ea9;
+$grayLighten: #a8b6bf;
+$smoke: #e0e6ed;
+$smokeDark: #dae2e8;
+$smokeDarken: #c9d7df;
+$snow: #fbfbfc;
+$snowDark: #f2f5f7;
+$snowDarken: #e3eaf0;
+$blue: #1289FE;
+$blueLight: #2C93FF;
+$blueLighten: #2CA8FF;
+$azure: #00aff2;
+$azureLight: #1FB6FF;
+$azureDark: #00a7eb;
+$frozen: #74a3c7;
+$frozenDark: #40769F;
+$frozenLight: rgba($frozen,.43);
+$frozenLighten: rgba($blue,.1);
+$yellow: #ffc82c;
+$orange: #ff7849;
+$orangeLight: #ff944d;
+$red: #FF4949;
+$redLight: #ff665a;
+$crimson: #fc576b;
+$chery: #d33682;
+$green: #13CE66;
+$greenLight: #4cd964;
+$emerald: #2ac2a0;
+
+// $pink: #ec425f;
+// $lime: #95EA5E;
+// $header: #78909c;
+// $red_bright: #ee5050;
+// $redLight: #ee728a;
+// $greenLight: #05d29f;
+// $greenLighten: #76cab4;
+// $green_bright: #4DC95B;
+// $emerald: #2dccaa;
+// $emerald_dark: #1abc9c;
+// $emerald_light: #56D9A3;
+// $emerald_bright: #1CDEB4;
+
+// $blue2: #158ffe;
+// $black2: #1b1b1f;
+// $black1: #191a1b;
+// $black2: #24272a;
+// $bg_select: #e2f0f9;
+// $gray2: #7e8188;
+// $grayDarken: #48555e;
+// $yellow: #ffff82;
+// $yellow_light: #fffcef;
+// $yellow_dark: #ffdd2e;
+// $yellow_darken: #ffcd33;
+// $blue_bright: #6a76fc;
+// $blue_bright2: #7781ff;
+// $blue_bright3: #5975ff;
+// $blueLight2: #5890ff;
+// $blueLight3: #7386d3;
+// $blueLighten: #00a7eb;
+// $blue_darken: #373f64;
+// $azureLight: #68f5ff;
+// $azureLight2: #35ffff;
+// $violet: #827dcf;
+// $violet_light: #9471db;
+// $purple: #c8affa;
+//
+// $w_violet: #5e35b1;
+// $w_orange: #ef6c00;
+// $w_green: #43a047;
+// $w_military: #558b2f;
+// $w_azure: #6dc2e1;
+// $w_azure2: #0091ea;
+// $w_blue: #00acc1;
+// $w_blue2: #1976d2;
+// $w_blue3: #00897b;
+// $w_emerald: #05d29f;
+// $telecom_azure: #00a8ff;
+// $telecom_orange: #ff6000;
+
+$cubic215: cubic-bezier(.215,.61,.355,1);
+$cubic57: cubic-bezier(.57,.06,.05,.95);
+$cubic645: cubic-bezier(.645,.045,.355,1);
+$cubic34: cubic-bezier(.34,.1,.34,1);
+$cubic25: cubic-bezier(.25,.46,.45,.94);
+$cubic2501: cubic-bezier(.25,.1,.25,1);
+$cubic42: cubic-bezier(.42,0,.05,1);
+$cubic345: cubic-bezier(.345,.000,.050,.995);
+$cubic089: cubic-bezier(0,.89,.44,1);
+
+$cubic145: cubic-bezier(.145,.82,.34,1.015);
+
+// .pushright, .pushleft
+$cubic272: cubic-bezier(.272,.224,.265,.975);
+// .pushleft.out, .pushleft.in {animation-duration: 420ms;}
+// translateX(-30%)
+
+$cubic205: cubic-bezier(.205,.735,.635,1.01);
+$bounce: cubic-bezier(.175,.885,.32,1.275);
+$bounceSoft: cubic-bezier(.175,.885,.32,1.1125);
+$cubic68: cubic-bezier(.68,-.55,.265,1.55);
+
+$cubic19: cubic-bezier(.19,1,.22,1);
+$cubic34b: cubic-bezier(.34,.61,.7,1);
+$cubic23: cubic-bezier(.23,1,.32,1);
+$cubic40: cubic-bezier(.4,0,.22,1);

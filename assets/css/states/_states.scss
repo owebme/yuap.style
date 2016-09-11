@@ -1,0 +1,58 @@
+.disable__hover * {
+	pointer-events:none !important;
+}
+.transition-none {
+    transition:none !important;
+}
+.transitionAll-none,
+.transitionAll-none * {
+    transition:none !important;
+}
+.transition-default {
+	transition-timing-function:linear;
+    transition-duration:80ms;
+    transition-property:all;
+}
+.accelerate {
+    // transform-style:preserve-3d;
+    transform-style:flat;
+    backface-visibility:hidden;
+}
+.content-empty {
+	content:"";
+}
+.centered {
+	float:none;
+    margin-left:auto;
+    margin-right:auto;
+}
+.cursor-pointer {
+    cursor:pointer;
+}
+.cursor-default {
+    cursor:default;
+}
+.userSelect-none {
+    user-select:none;
+}
+.outline-none {
+    outline:none;
+}
+.whiteSpace-nowrap {
+    white-space:nowrap;
+}
+.float-left {
+	float:left;
+}
+.float-right {
+	float:left;
+}
+.float-none {
+	float:none;
+}
+.clear:before,
+.clear:after {
+	clear:both;
+	display:table;
+	content:" ";
+}
