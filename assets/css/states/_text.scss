@@ -23,6 +23,10 @@
 .nowrap {
     white-space:nowrap;
 }
+.text-truncate {
+    @extend .text-ellipsis;
+    @extend .nowrap;
+}
 .textAnliased-auto {
     -webkit-font-smoothing:auto;
 }

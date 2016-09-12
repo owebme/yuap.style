@@ -1,6 +1,6 @@
 <root-main class="app">
 
-    <aside class="sidebar col-sm-7 col-md-6 col-lg-5">
+    <aside class="sidebar { openMenu : openMenu } col-xs-24 col-sm-7 col-md-6 col-lg-5">
         <div class="sidebar__inner">
             <a href="/" class="sidebar__header">
                 <div class="sidebar__header__title">StyleGuide</div>
@@ -17,15 +17,11 @@
             </nav>
         </div>
     </aside>
-    <section-content class="content col-sm-17 col-md-18 col-lg-19"></section-content>
+    <section-content class="content col-xs-offset-0 col-sm-offset-7 col-md-offset-6 col-lg-offset-5 col-sm-17 col-md-18 col-lg-19"></section-content>
 
 <script>
 
-    window.$$ = window.Zepto || window.jQuery;
-
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
+    window.$$ = window.jQuery || window.Zepto;
 
     var $ = this;
 
@@ -34,6 +30,9 @@
     $.openMenu = false;
 
     this.on("mount", function(){
+
+        var $body = $$("body"),
+            content = $$($.root)[0];
 
         var router = {
 
@@ -64,6 +63,8 @@
                 if (!section){
                     riot.mount("section-content", "section-404");
                 }
+                content.scrollTop = 0;
+                $body.scrollTop(0);
             }
         };
 
@@ -85,7 +86,7 @@
         },
         {
             title: 'Utility',
-            items: ['Aspect ratio', 'Center elements', 'Flexbox', 'Layout', 'Text manipulation']
+            items: ['Aspect ratio', 'Center elements', 'Flexbox', 'Layout', 'Text operations']
         }
     ];
 

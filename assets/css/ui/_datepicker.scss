@@ -28,7 +28,7 @@
     padding: 7px 10px 15px 10px;
     visibility:hidden;
 	opacity:0.001;
-	margin-left:999em;
+	margin-left:-999em;
     margin-top:-999em;
 	will-change:opacity, transform;
     @include accelerate();

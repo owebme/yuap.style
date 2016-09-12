@@ -144,7 +144,6 @@
 }
 .btn-group > .btn {
     @extend .pos-rel;
-    @extend .w-auto;
 }
 .btn-group {
     .btn + .btn,

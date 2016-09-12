@@ -30,19 +30,20 @@ body {
 	background-color:#fff;
 }
 .app {
-	@include abs();
-	min-width:320px;
-	min-height:100%;
-	height:auto;
-	overflow:hidden;
-	@include flex("row", "flex-start", "stretch");
+	display:block;
 }
 
-@media screen and (max-width: $w767) {
-	body {
-		overflow:hidden;
-	}
-	.app {
-		height:100%;
+/* All phones besides iPhone and all tablet devices */
+@media screen and (max-width: $w1024) {
+	.d-phone.d-no-ios,
+	.m-touch.d-no-phone {
+		body {
+			overflow:hidden;
+		}
+		.app {
+			@include abs();
+			overflow:auto;
+			-webkit-overflow-scrolling:touch;
+		}
 	}
 }

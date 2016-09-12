@@ -1,6 +1,5 @@
 .input {
     @extend .fontFamily-roboto;
-    @extend .outline-none;
     @extend .c-blackDark;
     @extend .fontWeight-3;
     @extend .border-none;
@@ -15,7 +14,6 @@
         box-shadow:inset 0 0 0 1px #c0ccda;
     }
     &:focus {
-        @extend .userSelect-text;
         box-shadow:inset 0 0 0 1px $azureLight;
 
         + .input-icon .input-svg-color {
@@ -99,22 +97,22 @@
         @extend .borderRadius-xs;
     }
     &-group {
-        position:relative;
-        display:block;
-        width:100%;
+        @extend .pos-rel;
+        @extend .display-block;
+        @extend .w100p;
 
         &-icon {
+            @extend .display-inlineBlock;
+
             .input,
             .textarea {
                 padding-left:38px;
             }
         }
         &-addon {
-            @include flex("row", "center", "center");
-            position:absolute;
-            top:0;
-            right:0;
-            height:100%;
+            @extend .flex-centered;
+            @extend .pos-tr;
+            @extend .h100p;
 
             + .input {
                 padding-right:40px;
@@ -171,38 +169,30 @@
         }
     }
 }
-.input-group {
+.input-group:not(.input-group-icon) {
     @extend .display-table;
-    @extend .nowrap;
-    @extend .inline;
-}
-.input-group > .input {
-    @extend .display-tableCell;
-    @extend .pos-rel;
-}
-.input-group {
+    transform:translateX(0);
+
+    > .input {
+        @extend .pos-rel;
+        @extend .display-tableCell;
+    }
     .input + .input,
     .input + .input-group,
     .input-group + .input,
     .input-group + .input-group {
         transform:translateX(-1px);
     }
-}
-.input-group > .input:not(:first-child):not(:last-child) {
-    @extend .borderRadius-none;
-}
-.input-group {
-    transform:translateX(0);
-
-    &:not(.input-group-icon) {
-        .input:first-child {
-            &:not(:last-child) {
-                @extend .borderRadiusRight-none;
-            }
+    > .input:not(:first-child):not(:last-child) {
+        @extend .borderRadius-none;
+    }
+    .input:first-child {
+        &:not(:last-child) {
+            @extend .borderRadiusRight-none;
         }
-        .input:focus {
-            z-index:1;
-        }
+    }
+    .input:focus {
+        z-index:1;
     }
     .input-context-s,
     .input-context-m,
@@ -212,7 +202,7 @@
             transform:translateX(-2px);
         }
     }
-}
-.input-group > .input:last-child:not(:first-child) {
-    @extend .borderRadiusLeft-none;
+    > .input:last-child:not(:first-child) {
+        @extend .borderRadiusLeft-none;
+    }
 }

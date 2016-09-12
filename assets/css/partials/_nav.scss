@@ -57,10 +57,11 @@
 
 @media screen and (max-width: $w767) {
     .nav {
-        @include abs(fixed);
+        @include abs();
         padding:80px 10px 40px;
         background-color:#fff;
         overflow:auto;
+        -webkit-overflow-scrolling:touch;
         z-index:2;
 
         &.hidden-xs {

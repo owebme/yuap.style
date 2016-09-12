@@ -1,9 +1,8 @@
 .textarea {
     @extend .fontFamily-roboto;
-    @extend .outline-none;
-    @extend .border-none;
     @extend .c-blackDark;
     @extend .fontWeight-3;
+    @extend .border-none;
     @extend .borderRadius-m;
     @extend .w100p;
     @extend .vAlign-middle;
@@ -14,7 +13,6 @@
         box-shadow:inset 0 0 0 1px #c0ccda;
     }
     &:focus {
-        @extend .userSelect-text;
         box-shadow:inset 0 0 0 1px $azureLight;
 
         + .input-icon .input-svg-color {

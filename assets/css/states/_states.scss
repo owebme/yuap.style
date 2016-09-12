@@ -13,6 +13,9 @@
     transition-duration:80ms;
     transition-property:all;
 }
+.nativeScroll {
+	-webkit-overflow-scrolling:touch;
+}
 .accelerate {
     // transform-style:preserve-3d;
     transform-style:flat;
