@@ -28,4 +28,9 @@
 }
 .inline {
     font-size:0;
+    @extend .clear;
+
+    > div {
+        @extend .display-inlineBlock;
+    }
 }

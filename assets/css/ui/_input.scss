@@ -6,6 +6,8 @@
     @extend .border-none;
     @extend .borderRadius-m;
     @extend .w100p;
+    @extend .vAlign-middle;
+    @extend .lineHeight-1;
     @extend .transition-default;
     box-shadow:inset 0 0 0 1px #d9e2e9;
 
@@ -13,6 +15,7 @@
         box-shadow:inset 0 0 0 1px #c0ccda;
     }
     &:focus {
+        @extend .userSelect-text;
         box-shadow:inset 0 0 0 1px $azureLight;
 
         + .input-icon .input-svg-color {
@@ -43,7 +46,7 @@
     }
     &-icon {
         @extend .pos-tl;
-        @extend .flex-row-centered;
+        @extend .flex-centered;
         width:38px;
         height:38px;
     }
@@ -73,25 +76,25 @@
     &-xl {
         min-width:60px;
         font-size:18px;
-        line-height:60px;
+        height:60px;
         padding:0 20px;
     }
     &-l {
         min-width:50px;
         font-size:16px;
-        line-height:50px;
+        height:50px;
         padding:0 16px;
     }
     &-m {
         min-width:40px;
         font-size:16px;
-        line-height:40px;
+        height:40px;
         padding:0 14px;
     }
     &-s {
         min-width:30px;
         font-size:14px;
-        line-height:30px;
+        height:30px;
         padding:0 10px;
         @extend .borderRadius-xs;
     }
@@ -137,33 +140,59 @@
         @extend .c-gray;
         @extend .bg-snowDark;
         @extend .cursor-default;
-        @extend .w-auto;
+        width:5px !important;
 
+        &-xl {
+            @extend .input;
+            @extend .input-xl;
+            @extend .input-context;
+            line-height:60px !important;
+        }
+        &-l {
+            @extend .input;
+            @extend .input-l;
+            @extend .input-context;
+            line-height:50px !important;
+        }
+        &-m {
+            @extend .input;
+            @extend .input-m;
+            @extend .input-context;
+            line-height:40px !important;
+        }
+        &-s {
+            @extend .input;
+            @extend .input-s;
+            @extend .input-context;
+            line-height:30px !important;
+        }
         &:hover {
             box-shadow:inset 0 0 0 1px #d9e2e9;
         }
     }
 }
 .input-group {
+    @extend .display-table;
+    @extend .nowrap;
     @extend .inline;
 }
 .input-group > .input {
+    @extend .display-tableCell;
     @extend .pos-rel;
-    @extend .w-auto;
 }
 .input-group {
     .input + .input,
     .input + .input-group,
     .input-group + .input,
     .input-group + .input-group {
-        margin-left:-1px;
+        transform:translateX(-1px);
     }
 }
 .input-group > .input:not(:first-child):not(:last-child) {
     @extend .borderRadius-none;
 }
 .input-group {
-    margin-left:0;
+    transform:translateX(0);
 
     &:not(.input-group-icon) {
         .input:first-child {
@@ -173,6 +202,14 @@
         }
         .input:focus {
             z-index:1;
+        }
+    }
+    .input-context-s,
+    .input-context-m,
+    .input-context-l,
+    .input-context-xl {
+        &:last-child {
+            transform:translateX(-2px);
         }
     }
 }

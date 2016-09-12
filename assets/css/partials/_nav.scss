@@ -55,7 +55,7 @@
     }
 }
 
-@media screen and (max-width: $xs-width) {
+@media screen and (max-width: $w767) {
     .nav {
         @include abs(fixed);
         padding:80px 10px 40px;
@@ -63,6 +63,9 @@
         overflow:auto;
         z-index:2;
 
+        &.hidden-xs {
+            pointer-events:none;
+        }
         &__title,
         &__subItem {
             font-size:20px !important;

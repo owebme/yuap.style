@@ -12,3 +12,8 @@
 		max-width:720px;
 	}
 }
+.rows {
+	@extend .centered;
+	padding-left:7.5px;
+	padding-right:7.5px;
+}

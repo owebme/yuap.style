@@ -19,3 +19,12 @@ input:focus::-moz-placeholder {
 input:focus:-ms-input-placeholder {
     color: transparent !important;
 }
+
+a, a:hover, input, textarea, button, select {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	appearance:none;
+	outline:none;
+	outline-style:none;
+}

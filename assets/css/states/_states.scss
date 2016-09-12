@@ -35,8 +35,12 @@
 .userSelect-none {
     user-select:none;
 }
+.userSelect-text {
+    user-select:text;
+}
 .outline-none {
     outline:none;
+	outline-style:none;
 }
 .whiteSpace-nowrap {
     white-space:nowrap;
@@ -45,7 +49,7 @@
 	float:left;
 }
 .float-right {
-	float:left;
+	float:right;
 }
 .float-none {
 	float:none;

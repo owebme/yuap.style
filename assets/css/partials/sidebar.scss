@@ -1,7 +1,9 @@
 .sidebar {
-    border-right:1px solid $smoke;
-    user-select:none;
-    overflow:auto;
+    @extend .d-borderRightWidth-1;
+    @extend .borderStyle-solid;
+    @extend .borderColor-smoke;
+    @extend .userSelect-none;
+    @extend .overflow-auto;
 
     &__inner {
         @extend .pb-xl;
@@ -11,17 +13,17 @@
         @extend .p-l;
 
         &:before {
+            @extend .content-empty;
             display:block;
             width:68px;
             height:80px;
-            content:"";
             background:url(/assets/images/logotype.svg) no-repeat 0 0 / cover;
             @extend .mb-m;
         }
         &__title {
             color:#8492a6;
             letter-spacing:3px;
-            text-transform:uppercase;
+            @extend .text-uppercase;
             @extend .fontSize-xxs;
         }
         &__menu {
@@ -31,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: $xs-width) {
+@media screen and (max-width: $w767) {
     .sidebar {
         position:fixed;
         top:0;

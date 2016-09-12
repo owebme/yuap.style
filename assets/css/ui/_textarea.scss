@@ -6,6 +6,7 @@
     @extend .fontWeight-3;
     @extend .borderRadius-m;
     @extend .w100p;
+    @extend .vAlign-middle;
     @extend .transition-default;
     box-shadow:inset 0 0 0 1px #d9e2e9;
 
@@ -13,6 +14,7 @@
         box-shadow:inset 0 0 0 1px #c0ccda;
     }
     &:focus {
+        @extend .userSelect-text;
         box-shadow:inset 0 0 0 1px $azureLight;
 
         + .input-icon .input-svg-color {

@@ -1,4 +1,5 @@
 // base
+@import 'base/normalize';
 @import 'base/reset';
 @import 'base/base';
 @import 'base/fonts';
@@ -36,6 +37,7 @@
 // states
 @import 'states/states';
 @import 'states/display';
+@import 'states/flexbox';
 @import 'states/pageWrap';
 @import 'states/position';
 @import 'states/overflow';
@@ -53,3 +55,8 @@
 @import 'states/boxShadow';
 @import 'states/opacity';
 @import 'states/typography';
+
+// states responsive
+@import 'states/responsive/border';
+@import 'states/responsive/margin';
+@import 'states/responsive/padding';

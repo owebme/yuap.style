@@ -1,7 +1,7 @@
 .tag {
     @extend .pos-rel;
     @extend .float-left;
-    @extend .flex-row-centered;
+    @extend .flex-centered;
     @extend .pl-xs;
     @extend .pr-xs;
     @extend .h35;
@@ -23,7 +23,7 @@
     @extend .transition-default;
 
     &-count {
-        @extend .flex-row-centered;
+        @extend .flex-centered;
         @extend .pos-abs;
         @extend .borderRadius-circle;
         @extend .fontFamily-roboto;

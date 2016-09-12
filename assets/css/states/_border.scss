@@ -20,6 +20,22 @@
     .borderRadiusBottomRight-#{$title} {
         border-bottom-right-radius:$size;
     }
+    .borderRadiusLeft-#{$title} {
+        border-top-left-radius:$size;
+        border-bottom-left-radius:$size;
+    }
+    .borderRadiusRight-#{$title} {
+        border-top-right-radius:$size;
+        border-bottom-right-radius:$size;
+    }
+    .borderRadiusTop-#{$title} {
+        border-top-left-radius:$size;
+        border-top-right-radius:$size;
+    }
+    .borderRadiusBottom-#{$title} {
+        border-bottom-left-radius:$size;
+        border-bottom-right-radius:$size;
+    }
 }
 .borderRadius-circle {
     border-radius:50%;

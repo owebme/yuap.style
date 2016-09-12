@@ -7,6 +7,12 @@
 .display-block {
     display:block;
 }
+.display-table {
+    display:table;
+}
+.display-tableCell {
+    display:table-cell;
+}
 .vAlign-top {
     vertical-align:top;
 }
@@ -18,25 +24,4 @@
 }
 .vAlign-text-bottom {
     vertical-align:text-bottom;
-}
-.flex {
-    display:flex;
-}
-.flex-row-centered {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-}
-.flex-row-center-stretch {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:stretch;
-}
-.flex-column-centered {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
 }

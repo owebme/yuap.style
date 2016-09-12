@@ -2,6 +2,8 @@
 *:after,
 *:before {
 	box-sizing:border-box;
+	margin:0;
+	padding:0;
 }
 html,
 body {
@@ -36,12 +38,11 @@ body {
 	@include flex("row", "flex-start", "stretch");
 }
 
-@media screen and (max-width: $xs-width) {
+@media screen and (max-width: $w767) {
 	body {
 		overflow:hidden;
 	}
 	.app {
 		height:100%;
-		overflow:auto;
 	}
 }

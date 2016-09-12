@@ -1,6 +1,7 @@
 .pagination {
-    @extend .flex-row-centered;
+    @extend .flex-centered;
     @extend .inline;
+    @extend .userSelect-none;
 }
 .pagination-btn {
     @extend .pos-rel;
@@ -18,7 +19,7 @@
 
     &.prev,
     &.next {
-        @extend .flex-row-centered;
+        @extend .flex-centered;
         @extend .opacity-80;
         transition:transform 0.2s $cubic215, opacity 0.2s $cubic215;
 

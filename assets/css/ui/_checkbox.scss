@@ -4,15 +4,18 @@
     @extend .userSelect-none;
     @extend .text-left;
     @extend .c-gray;
+    @extend .nowrap;
     @extend .cursor-pointer;
     padding-left:45px;
     line-height:30px;
 
     .checkbox-control {
+        @include accelerate();
         width:30px;
         height:30px;
 
         &:after {
+            @include accelerate();
             width:22px;
             height:22px;
         }
@@ -37,24 +40,27 @@
         }
     }
     &-control {
-        @extend .flex-row-centered;
+        @extend .flex-centered;
         @extend .pos-tl;
+        @extend .bg-white;
         @extend .borderRadius-circle;
         box-shadow:inset 0 0 0 2px $smoke;
-        transition:all .5s $cubic089;
+        will-change:box-shadow;
+        transition:box-shadow .5s $cubic089;
 
         &:after {
             content:"";
             @extend .display-inlineBlock;
-            opacity:0;
+            @extend .opacity-0;
             transform:scale3d(0.5, 0, 1);
-            transition:all .5s $cubic089;
+            will-change:opacity, transform;
+            transition:opacity .5s $cubic089, transform .5s $cubic089;
             @include ui-icon(check_white);
         }
     }
     input {
         @extend .pos-abs;
-        opacity:0;
+        @extend .opacity-0;
         z-index:-1;
     }
     input:checked ~ {
@@ -62,9 +68,9 @@
             box-shadow:inset 0 0 0 15px $green;
 
             &:after {
-                opacity:1;
+                @extend .opacity-100;
                 transform:scale3d(1, 1, 1);
-                transition:all .35s $bounce .2s;
+                transition:opacity .35s $cubic089 .2s, transform .35s $cubic089 .2s;
             }
         }
     }

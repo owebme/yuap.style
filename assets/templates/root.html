@@ -23,6 +23,10 @@
 
     window.$$ = window.Zepto || window.jQuery;
 
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+
     var $ = this;
 
     $.parentSection = null;
@@ -81,7 +85,7 @@
         },
         {
             title: 'Utility',
-            items: ['Aspect ratio', 'Center elements', 'Hide elements', 'Layout', 'Text manipulation']
+            items: ['Aspect ratio', 'Center elements', 'Flexbox', 'Layout', 'Text manipulation']
         }
     ];
 
